@@ -1,19 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, GeoJSON, LayersControl } from 'react-leaflet';
-import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import deliveryArea from '../static/deliveryArea.json';
-import { createRoot } from 'react-dom/client';
-import MetricCard from './base/MetricCard';
 import { FeatureCollection, Feature, Geometry } from 'geojson';
-import { Layer } from 'leaflet';
 
 const { BaseLayer } = LayersControl;
 
 const deliveryAreaData: FeatureCollection<Geometry> = deliveryArea as FeatureCollection<Geometry>;
 
 type DeliveryAreaProps = {
-    someProp: string;
+    someProp?: string;
     anotherProp?: number;
 };
 
