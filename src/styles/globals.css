@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+   
+}
+
+body {
+    position: relative;
+    font-family: Ubuntu,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #333333;
+  }
+  
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffc3f790; 
+    opacity: 0.1;
+    z-index: -1; 
+  }
+  
+   
+  body {
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+    url('../static/bgImage.jpeg') 0% 0% no-repeat;
+    background-size: cover;
+
+  }
+
+  body .noBorderInput .MuiOutlinedInput-root {
+    &:focus-within .MuiOutlinedInput-notchedOutline {
+        border: 1px solid #80c0a275;
+    }
+    &:not(:focus-within) .MuiOutlinedInput-notchedOutline {
+        border: none;
+    }
+}
+
+.noBorderInput textarea:focus {
+    border: 1px solid #80c0a2;
+}
