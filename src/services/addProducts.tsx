@@ -1,4 +1,4 @@
-import { FormValues } from "@/pages/addProducts";
+import { FormValues } from "@/components/products/addProducts";
 
 export async function addProduct(formData: FormValues) {
     try {
